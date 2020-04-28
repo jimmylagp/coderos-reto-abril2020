@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Coderos - Abril 2020</title>
+    <style>
+        .counter__wrapper {
+            height: auto;
+            position: relative;
+        }
+
+        .counter__textarea {
+            background-color: white;
+            border: 1px solid black;
+            counter-reset: line;
+            display: block;
+            height: 200px;
+            overflow: auto;
+            position: relative;
+            white-space: pre-line;
+            width: 500px;
+        }
+
+        .counter__textarea div::before {
+            -webkit-user-select: none;
+            background-color: dodgerblue;
+            bottom: 0;
+            color: white;
+            counter-increment: line;
+            content: counter(line) " ";
+            height: 1rem;
+            padding: 0.5rem;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            width: 1rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="counter">
+        <h2 class="counter__tile">Textarea with counter without JS</h2>
+        <div class="counter__wrapper">
+            <code contenteditable="true" class="counter__textarea"></code>
+        </div>
+    </section>
+</body>
+</html>
